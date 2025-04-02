@@ -1,0 +1,101 @@
+% **********************************************************
+%					 ELEMENTOS PRÉ-TEXTUAIS				   *
+% **********************************************************
+
+% ---------------------------
+% Dedicatória
+% ---------------------------
+\begin{dedicatoria}
+   \vspace*{\fill}
+   \centering
+   \noindent
+   \textit{ Dedico esta monografia a ...} 
+   \vspace*{\fill}
+\end{dedicatoria}
+
+
+% ---------------------------
+% Agradecimentos
+% ---------------------------
+\begin{agradecimentos}
+
+Agradeço a ....
+
+\end{agradecimentos}
+
+
+% ---------------------------
+% Epígrafe
+% ---------------------------
+\begin{epigrafe}
+    \vspace*{\fill}
+	\begin{flushright}
+		\textit{``Em vez de tentar produzir um programa \\para simular a mente de um adulto,\\ por que não a de uma criança $?$''\\
+		(Alan Turing)}
+	\end{flushright}
+\end{epigrafe}
+
+
+% ---------------------------
+% RESUMOS E PALAVRAS-CHAVE
+% ---------------------------
+\setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
+% --- resumo em português ---
+\begin{resumo}
+    \imprimirresumo
+    \par\noindent
+    \textbf{Palavras-chave}: \imprimirpalavraschave
+\end{resumo}
+
+% --- resumo em inglês ---
+\begin{resumo}[Abstract]
+    \begin{otherlanguage*}{english}
+        \imprimirabstract
+        \par\noindent 
+        \textbf{Key-words}: \imprimirkeywords
+    \end{otherlanguage*}
+\end{resumo}
+
+% ---------------------------
+% inserir lista de ilustrações
+% ---------------------------
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures*
+\cleardoublepage
+
+
+% ---------------------------
+% inserir lista de tabelas
+% ---------------------------
+\pdfbookmark[0]{\listtablename}{lot}
+\listoftables*
+\cleardoublepage
+
+
+% ---------------------------
+% inserir lista de abreviaturas e siglas
+\begin{siglas}
+  \item[AG] Algorítmo Genético
+  \item[RNA] Rede Neural Recorrente
+  \item[PEAS] Performace, Environment,  Actuators, Sensors
+  \item[LSTM] Long Short Term Memory
+\end{siglas}
+% ---
+
+% ---------------------------
+% inserir lista de símbolos
+% ---------------------------
+\begin{simbolos}
+ \item[$ \Gamma $] Letra grega Gama
+ \item[$ \Lambda $] Lambda
+ \item[$ \zeta $] Letra grega minúscula zeta
+ \item[$ \in $] Pertence
+\end{simbolos}
+
+
+% ---------------------------
+% inserir o sumario
+% ---------------------------
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage

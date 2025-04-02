@@ -1,0 +1,132 @@
+%% Customizações do abnTeX2 (https://github.com/abntex/abntex2) para os cursos de Ciência da Computação e Engenharia de Software da Universidade Regional do Noroeste do Estado do Rio Grande do Sul - UNIJUÍ,
+
+%% The Current Maintainer of this customization is Prof. Dr. Eldair F. Dornelles, eldair.dornelles@unijui.edu.br
+
+%% Further information about abnTeX2 are available on https://github.com/abntex/abntex2
+
+% ---
+% INICIO DAS CUSTOMIZACOES
+% ---
+
+% mudar a fonte padrão do template
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault} % Define Arial como fonte principal
+
+
+\newcommand{\professordabanca}[1]{#1}
+\renewcommand{\professordabanca}[1]{\def\imprimirprofessordabanca{#1}}
+
+\newcommand{\campus}[1]{#1}
+\renewcommand{\campus}[1]{\def\imprimircampus{\MakeUppercase{CAMPUS #1}}}
+
+\newcommand{\curso}[1]{#1}
+\renewcommand{\curso}[1]{\def\imprimircurso{\MakeUppercase{#1}}}
+
+\newcommand{\dataaprovacao}[1]{#1}
+\renewcommand{\dataaprovacao}[1]{\def\imprimirdataaprovacao{#1}}
+
+\newcommand{\resumoemportugues}[1]{#1}
+\renewcommand{\resumoemportugues}[1]{\def\imprimirresumo{#1}}
+
+\newcommand{\palavraschaveemportugues}[1]{#1}
+\renewcommand{\palavraschaveemportugues}[1]{\def\imprimirpalavraschave{#1}}
+
+\newcommand{\resumoemingles}[1]{#1}
+\renewcommand{\resumoemingles}[1]{\def\imprimirabstract{#1}}
+
+\newcommand{\palavraschaveemingles}[1]{#1}
+\renewcommand{\palavraschaveemingles}[1]{\def\imprimirkeywords{#1}}
+
+
+% ------------------ contruindo a capa do TCC -----------------------
+\renewcommand{\imprimircapa}{%
+  \begin{capa}%
+    \center
+    \ABNTEXchapterfont\Large\imprimirinstituicao\\
+    \vspace{1.5mm}
+    \imprimircurso
+    \vspace*{1cm}
+    \vfill
+    {\ABNTEXchapterfont\large\imprimirautor}
+    \vfill
+    \ABNTEXchapterfont\bfseries\LARGE\imprimirtitulo
+    \vfill \vfill \vfill
+    \large\imprimirlocal
+    \par
+    \large\imprimirdata
+    \vspace*{1cm}
+  \end{capa}
+}
+
+
+% --------------- contruindo a folha de rosto do TCC --------------------
+\makeatletter
+\renewcommand{\folhaderostocontent}{
+  \begin{center}
+    {\ABNTEXchapterfont\large\imprimirautor}
+    \vspace*{\fill}\vspace*{\fill}
+    \begin{center}
+      \ABNTEXchapterfont\bfseries\Large\imprimirtitulo
+    \end{center}
+    \vspace*{\fill}
+    \abntex@ifnotempty{\imprimirpreambulo}{%
+      \hspace{.45\textwidth}
+      \begin{minipage}{.5\textwidth}
+      \SingleSpacing
+      \imprimirpreambulo
+      \end{minipage}%
+      \vspace*{\fill}
+    }%
+    {\large\imprimirorientadorRotulo~\imprimirorientador}
+%     \abntex@ifnotempty{\imprimircoorientador}{%
+%       {\large\imprimircoorientadorRotulo~\imprimircoorientador}%
+%     }%
+    \vfill
+    \large\imprimirlocal
+    \par
+    \large\imprimirdata
+    \vspace*{1cm}
+  \end{center}
+}
+\makeatother
+
+
+% --------------- contruindo a folha de aprovação --------------------
+\makeatletter
+\newcommand{\imprimirfolhadeaprovacao}{
+    
+    \begin{center}
+        {\ABNTEXchapterfont\large\imprimirautor}
+        \vspace*{\fill}\vspace*{\fill}
+        \begin{center}
+            \ABNTEXchapterfont\bfseries\Large\imprimirtitulo
+        \end{center}
+        \vspace*{\fill}
+
+        \hspace{.45\textwidth}
+        \begin{minipage}{.5\textwidth}
+            \imprimirpreambulo
+        \end{minipage}%
+        \vspace*{\fill}
+      \end{center}
+            
+    %Trabalho aprovado. \imprimirlocal, xx de xxxxxx de 2025:
+   {Trabalho aprovado. \imprimirlocal, \imprimirdataaprovacao}
+   \assinatura{\textbf{\imprimirorientador} \\ Orientador} 
+   \assinatura{\textbf{\imprimirprofessordabanca } \\ Banca}
+%   \assinatura{\textbf{Professor} \\ Convidado 2}
+      
+   \begin{center}
+        \vspace*{0.5cm}
+        {\large\imprimirlocal}
+        \par
+        {\large\imprimirdata}
+        \vspace*{1cm}
+    \end{center}
+    \newpage
+}
+\makeatother
+
+% ---
+% FIM DAS CUSTOMIZACOES PARA A UNIVERSIDADE UNIJUÍ
+% ---
