@@ -19,8 +19,10 @@
 \newcommand{\campus}[1]{#1}
 \renewcommand{\campus}[1]{\def\imprimircampus{\MakeUppercase{CAMPUS #1}}}
 
-\newcommand{\curso}[1]{#1}
-\renewcommand{\curso}[1]{\def\imprimircurso{\MakeUppercase{#1}}}
+\newcommand{\curso}[1]{%
+  \def\imprimirNomeDoCurso{#1}%
+  \def\imprimirCursoMaiusculo{CURSO DE \MakeUppercase{#1}}%
+}
 
 \newcommand{\dataaprovacao}[1]{#1}
 \renewcommand{\dataaprovacao}[1]{\def\imprimirdataaprovacao{#1}}
@@ -44,7 +46,7 @@
     \center
     \ABNTEXchapterfont\Large\imprimirinstituicao\\
     \vspace{1.5mm}
-    \imprimircurso
+    \imprimirCursoMaiusculo
     \vspace*{1cm}
     \vfill
     {\ABNTEXchapterfont\large\imprimirautor}

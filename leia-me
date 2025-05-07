@@ -1,0 +1,73 @@
+% ----------------------------
+% main.tex
+% ----------------------------
+% 1 - Define as configurações iniciais do projeto LaTeX, incluindo o tipo de documento, templates e pacotes utilizados e configurações globais do documento.  
+
+% 2 -  Organiza a estrutura do documento, e inclui os arquivos auxiliares para as seções pretextuais, textuais e pós-textuais.  
+
+
+% ----------------------------
+% 01_metadados.tex  
+% ----------------------------
+% Neste arquivo, devem ser definidos a instituição, o título do TCC, o autor, o orientador, a banca, as datas e o preâmbulo do documento. Essas informações serão utilizadas para gerar automaticamente a capa, a folha de rosto e a folha de aprovação.
+
+% Além disso, outros metadados, como os resumos e as palavras-chave (em português e inglês), também devem ser inseridos neste arquivo.
+
+
+% ----------------------------
+% 02_pre-textuais.tex  
+% ----------------------------
+% Agrupa os elementos pretextuais, como dedicatória, agradecimentos, epígrafe, resumo, abstract, listas de ilustrações e tabelas, abreviaturas, siglas, símbolos e sumário.  
+
+
+% ----------------------------
+%03_textuais.tex
+% ----------------------------
+% Reúne os capítulos do TCC, como introdução, fundamentação teórica, metodologia, resultados e conclusão. Em outras palavras, é neste arquivo que o conteúdo principal do trabalho é escrito. 
+
+
+% ----------------------------
+% 04_pos-textuais.tex  
+% ----------------------------
+% Inclui os elementos pós-textuais, como apêndices e anexos. 
+
+
+% ----------------------------
+% references.bib  
+% ----------------------------
+% Arquivo BibTeX que armazena as referências bibliográficas do trabalho, permitindo a geração automática de citações conforme o estilo definido.  
+
+
+% ----------------------------
+% templates
+% ----------------------------
+% Contém os templates customisados ( antex2cite.sty e unijui.sty) para a formatação do documento.
+
+% ----------------------------
+% abntex2cite.sty  
+% ----------------------------
+% Arquivo de estilo para formatação de citações conforme as normas da ABNT. Baseado no projeto abnTeX2 disponível no GitHub, com ajustes para contemplar atualizações da ABNT.  
+
+
+% ----------------------------
+% unijui.sty  
+% ----------------------------
+% Arquivo de estilo específico da UNIJUÍ, contendo regras de formatação padronizadas para documentos acadêmicos da instituição.  
+
+
+
+% ----------------------------
+% figs
+% ----------------------------
+% nesta pasta deve ser armazenado as figuras que serão utilizadas no TCC crie uma estrutura de hierarquica de pastas dentro de figs representando a estrutura do TCC (introdução, referencial teorico...) e insire as figuras dentro de suas respectivas pastas. 
+% Exemplo:
+% fig
+%   |_introducao
+%   |_referencial-teorico
+%   |   |_nome-secao-1
+%   |   |   |_nome-imagem1.jpg (eps, png, jpg)
+%   |   |   |_nome-imagem2.jpg (eps, png, jpg)
+%   |   |   |_nome-imagem3.jpg (eps, png, jpg)
+%   |_nome-da-secao-de-desenvolvimento
+%   |   |_nome-secao-1
+%   |   |_nome-secao-2

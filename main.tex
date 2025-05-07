@@ -32,9 +32,14 @@
 	brazil				% o último idioma é o principal do documento
 	]{abntex2}
 
+
 % ---
-% Pacotes básicos 
+% Pacotes utilizados na construção do template
 % ---
+\usepackage[brazilian,hyperpageref]{backref}	% Paginas com as citações na bibl
+\usepackage[alf]{templates/abntex2cite}	        % Citações padrão ABNT
+\usepackage{templates/unijui} 	
+%\usepackage{lipsum}		    % para geração de dummy text
 \usepackage{lmodern}			% Usa a fonte Latin Modern			
 \usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
 \usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
@@ -45,20 +50,13 @@
 \usepackage{microtype} 			% para melhorias de justificação
 
 % ---
-		
-% ---
-% Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2
-% ---
-%\usepackage{lipsum}				% para geração de dummy text
+% Pacotes adicionais incluídos pelo aluno. Seguir o padrão da seção acima.
 % ---
 
-% ---
-% Pacotes de citações
-% ---
-\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
 
-\usepackage[alf]{templates/abntex2cite}	% Citações padrão ABNT
-\usepackage{templates/unijui} 	
+
+
+
 % --- 
 % CONFIGURAÇÕES DE PACOTES
 % --- 
@@ -80,6 +78,7 @@
 	\fi}%
 % ---
 
+
 % ---
 % Configurações de aparência do PDF final
 
@@ -96,8 +95,8 @@
     	pdfsubject={\imprimirpreambulo},
 	    pdfcreator={LaTeX with abnTeX2},
 		pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
-		colorlinks=true,       		% false: boxed links; true: colored links
-    	linkcolor=black,          	% color of internal links
+		colorlinks=true,       		    % false: boxed links; true: colored links
+    	linkcolor=black,          	    % color of internal links
     	citecolor=black,        		% color of links to bibliography
     	filecolor=magenta,      		% color of file links
 		urlcolor=black,
